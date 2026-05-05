@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://knyju4pdt2wb"]
+
+[ext_resource type="Script" uid="uid://dn3fjd0kq0bk1" path="res://addons/map_maker/nodes/module_instance_3d.gd" id="1_l1f2c"]
+[ext_resource type="Resource" uid="uid://x1jun84t0tqj" path="res://addons/map_maker/examples/modules/room_small.tres" id="2_pqn1o"]
+[ext_resource type="Resource" path="res://addons/map_maker/examples/modules/hallway_medium.tres" id="3_pqn1o"]
+
+[node name="DmFunnel" type="Node3D" unique_id=1610707198]
+
+[node name="Room_Small" type="Node3D" parent="." unique_id=1223423139]
+script = ExtResource("1_l1f2c")
+module_definition = ExtResource("2_pqn1o")
+
+[node name="Hallway_Medium" type="Node3D" parent="." unique_id=1800423600]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -1.7484555e-07, 0, -5)
+script = ExtResource("1_l1f2c")
+module_definition = ExtResource("3_pqn1o")

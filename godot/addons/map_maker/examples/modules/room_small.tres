@@ -1,0 +1,53 @@
+[gd_resource type="Resource" script_class="ModuleDefinition" format=3 uid="uid://x1jun84t0tqj"]
+
+[ext_resource type="Script" uid="uid://drtpdl6vgf0pp" path="res://addons/map_maker/core/module_definition.gd" id="1_module"]
+[ext_resource type="Script" uid="uid://k2e0r0ppf3j4" path="res://addons/map_maker/core/module_socket.gd" id="2_socket"]
+
+[sub_resource type="Resource" id="Resource_socket_north"]
+script = ExtResource("2_socket")
+socket_name = &"north"
+socket_type = &"room.edge.medium"
+local_position = Vector3(0, 0, -3)
+width = 3.0
+height = 4.0
+tags = PackedStringArray("walkable", "interior")
+
+[sub_resource type="Resource" id="Resource_socket_east"]
+script = ExtResource("2_socket")
+socket_name = &"east"
+socket_type = &"room.edge.medium"
+local_position = Vector3(3, 0, 0)
+local_rotation_degrees = Vector3(0, -90, 0)
+width = 3.0
+height = 4.0
+tags = PackedStringArray("walkable", "interior")
+
+[sub_resource type="Resource" id="Resource_socket_south"]
+script = ExtResource("2_socket")
+socket_name = &"south"
+socket_type = &"room.edge.medium"
+local_position = Vector3(0, 0, 3)
+local_rotation_degrees = Vector3(0, 180, 0)
+width = 3.0
+height = 4.0
+tags = PackedStringArray("walkable", "interior")
+
+[sub_resource type="Resource" id="Resource_socket_west"]
+script = ExtResource("2_socket")
+socket_name = &"west"
+socket_type = &"room.edge.medium"
+local_position = Vector3(-3, 0, 0)
+local_rotation_degrees = Vector3(0, 90, 0)
+width = 3.0
+height = 4.0
+tags = PackedStringArray("walkable", "interior")
+
+[resource]
+script = ExtResource("1_module")
+module_id = &"Room_Small"
+display_name = "Room Small"
+category = &"room"
+footprint_cells = Vector3i(6, 1, 6)
+cell_size = Vector3(1, 4, 1)
+sockets = Array[ExtResource("2_socket")]([SubResource("Resource_socket_north"), SubResource("Resource_socket_east"), SubResource("Resource_socket_south"), SubResource("Resource_socket_west")])
+tags = PackedStringArray("walkable", "interior")

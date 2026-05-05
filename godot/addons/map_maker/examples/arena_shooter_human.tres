@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="ScaleProfile" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://addons/map_maker/core/scale_profile.gd" id="1_scale"]
+
+[resource]
+script = ExtResource("1_scale")
+profile_name = &"ArenaShooterHuman"
+base_grid = 0.5
+major_grid = 2.0
+allowed_yaw_degrees = PackedFloat32Array(0, 45, 90, 135, 180, 225, 270, 315)
+player_height = 1.8
+player_radius = 0.4
+camera_height = 1.65
+jump_height = 1.2
+step_height = 0.35
+door_width = 2.0
+door_height = 2.5
+hallway_width = 3.0
+ceiling_standard = 4.0

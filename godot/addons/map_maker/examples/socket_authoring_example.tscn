@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://addons/map_maker/nodes/module_instance_3d.gd" id="1_instance"]
+[ext_resource type="Resource" path="res://addons/map_maker/examples/modules/room_small.tres" id="2_room"]
+[ext_resource type="Resource" path="res://addons/map_maker/examples/modules/hallway_medium.tres" id="3_hallway"]
+
+[node name="SocketAuthoringExample" type="Node3D"]
+
+[node name="Room_Small" type="Node3D" parent="."]
+script = ExtResource("1_instance")
+module_definition = ExtResource("2_room")
+
+[node name="Hallway_Medium" type="Node3D" parent="."]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, -5)
+script = ExtResource("1_instance")
+module_definition = ExtResource("3_hallway")
